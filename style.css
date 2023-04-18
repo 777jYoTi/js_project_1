@@ -1,0 +1,414 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #3D087B;
+}
+/* main grid  */
+.main1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide the main grid into two equal-sized columns */
+    gap: 10px;
+    /* Add some gap between the left and right grids */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* .left side{
+    display: flex;
+}  */
+.schedule-plate {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(247, 246, 246);
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.select {
+    width: 250px;
+}
+/* .sun{
+    width: 100px;
+    height: 100px;
+    background-image: url(./wake_up.svg);
+    background-size: contain;
+    background-repeat:no-repeat;
+    animation: rotate-sun 2s linear infinite;
+}
+
+@keyframes rorate-sun {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+.line {
+    width: 0px;
+    height: 40px;
+    border: 2px dotted black;
+    margin-left: 33px;
+}
+
+.plate {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.good {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    background-color: blueviolet;
+    border: 1px solid;
+    border-radius: 10px;
+    font-style: oblique;
+}
+
+.last {
+    display: flex;
+    gap: 135px;
+
+}
+
+.setalaram {
+    display: flex;
+    width: 200px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 265%;
+    height: 50px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: larger;
+    background: linear-gradient(to right, #6E54EC 0%, #CB52F8 33%, #FC5EFF 66%, #F1A7C5 100%)
+}
+
+.button:hover {
+    background: linear-gradient(to right, #F1A7C5 0%, #FC5EFF 33%, #CB52F8 66%, #6E54EC 100%)
+}
+
+
+.paragraph {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: #CB52F8;
+}
+
+/* .right_side{
+display: flex;
+justify-content: center;
+align-items: center; 
+
+} */
+.box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: white;
+    gap: 15px;
+}
+
+.box2 {
+    height: 40px;
+    width: 365px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    top: -24px;
+    right: -80px;
+    z-index: -1;
+    background-color: aquamarine;
+}
+
+.box3 {
+    height: 30px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    top: -41px;
+    right: -108px;
+    z-index: -2;
+    background-color: #6E54EC;
+}
+
+.grab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 1px solid;
+    border-radius: 10px;
+    font-style: oblique;
+    font-size: small;
+}
+
+.mrng {
+    width: 500px;
+}
+
+/* clock */
+.hours {
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+
+    background-image: url(timeline.svg);
+}
+
+.ampm {
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+    align-items: center;
+    background-image: url(timeline.svg);
+}
+
+.minutes {
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+    background-image: url(timeline.svg);
+}
+
+.seconds {
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+    background-image: url(timeline.svg);
+}
+
+.ampm {
+    width: 70px;
+    height: 80px;
+    border-radius: 10px;
+    background-image: url(AM_svg.svg);
+}
+
+.xxx {
+    text-align: center;
+    margin-top: 15px;
+    color: #5F0089;
+}
+
+.yyy {
+    margin-left: 17px;
+    font-size: 20px;
+    color: #5F0089;
+}
+
+.zzz {
+    margin-left: 14px;
+    font-size: 30px;
+    margin-top: 18px;
+    color: white;
+}
+
+#change_content {
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bolder;
+}
+/* responsive for mobile */
+@media screen and (min-width:300px) and (max-width:500px) {
+    .main1 {
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        padding: 10px;
+
+    }
+
+    .right_side {
+        grid-row: 2;
+        /* Move div2 to the second row */
+    }
+
+    .schedule-plate {
+        position: absolute;
+        top: 390px;
+        width: 590px;
+    }
+
+    .abcd {
+        position: absolute;
+        top: 100px;
+        width: 590px;
+    }
+
+    .grab {
+        position: absolute;
+        top: 275px;
+        width: 590px;
+    }
+
+    .good {
+        position: absolute;
+        top: 735px;
+        width: 590px;
+    }
+
+    .mrng {
+        position: absolute;
+        top: 870px;
+        width: 500px;
+    }
+
+    .last {
+        position: absolute;
+        top: 1240px;
+        gap: 10px;
+    }
+
+    .box1 {
+        width: 589px;
+    }
+
+    .box2 {
+        width: 425px;
+    }
+
+    .box3 {
+        width: 365px;
+    }
+
+    .setalaram {
+        width: 590px;
+        font-size: large;
+        font-style: oblique;
+        font-weight: bolder;
+    }
+
+    .paragraph {
+        width: 590px;
+        font-size: large;
+        font-style: oblique;
+        font-weight: bolder;
+    }
+
+    .last {
+        flex-direction: column;
+    }
+
+    .clock_img {
+        position: absolute;
+        left: 180px;
+    }
+    .line{
+        margin-left: 47px;
+    }
+
+
+
+}
+/* responsive for TABLET */
+@media screen and (min-width:550px) and (max-width:900px) {
+    .main1 {
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+        padding: 10px;
+
+    }
+
+    .right_side {
+        grid-row: 2;
+        /* Move div2 to the second row */
+    }
+
+    .schedule-plate {
+        position: absolute;
+        top: 390px;
+        width: 900px;
+    }
+
+    .abcd {
+        position: absolute;
+        top: 100px;
+        width: 900px;
+    }
+
+    .grab {
+        position: absolute;
+        top: 275px;
+        width: 900px;
+    }
+
+    .good {
+        position: absolute;
+        top: 735px;
+        width: 900px;
+    }
+
+    .pp {
+        position: absolute;
+        top: 870px;
+        width: 900px;
+    }
+
+    .last {
+        flex-direction: column;
+        position: absolute;
+        top: 1475px;
+        width: 800px;
+        gap: 10px;
+    }
+
+    .box1 {
+        width: 899px;
+    }
+
+    .box2 {
+        width: 745px;
+    }
+
+    .box3 {
+        width: 700px;
+    }
+
+    .setalaram {
+        width: 900px;
+        font-size: large;
+        font-style: oblique;
+        font-weight: bolder;
+    }
+
+    .paragraph {
+        width: 900px;
+        font-size: large;
+        font-style: oblique;
+        font-weight: bolder;
+    }
+
+    .clock_img {
+        position: absolute;
+        left: 360px;
+    }
+
+    .line {
+        margin-left: 100px;
+    }
+
+}
